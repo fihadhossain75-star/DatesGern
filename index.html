@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exclusive Dating — 18+ Only</title>
+  <meta name="description" content="Fast & private dating. Please confirm your age to continue." />
+  <style>
+    :root{
+      --bg1:#192a36;
+      --bg2:#1f3d4a;
+      --accent:#ff4d4d;
+      --card:#fff;
+      --muted:#657786;
+      --radius:14px;
+      --maxw:680px;
+    }
+    body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(120deg,var(--bg1),var(--bg2));min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;color:#1a202c}
+    .wrap{width:100%;max-width:var(--maxw);background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.1);overflow:hidden}
+    header{padding:20px;background:var(--accent);color:#fff;text-align:center;font-size:24px;font-weight:bold}
+    .content{padding:24px;text-align:center}
+    .content p{font-size:16px;color:var(--muted);margin-bottom:20px}
+    .btn{display:inline-block;padding:14px 28px;font-size:18px;border:none;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;cursor:pointer;transition:0.3s}
+    .btn:hover{background:#e04343}
+    .age-check{margin:20px 0;font-size:14px;color:var(--muted)}
+    footer{padding:15px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid #f0f0f0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>Find Local Singles — 18+ Only</header>
+    <div class="content">
+      <p>Welcome! Please confirm that you are at least 18 years of age to continue to the offer.</p>
+      <div class="age-check">
+        <label>
+          <input type="checkbox" id="agreeAge" /> I am 18 years or older.
+        </label>
+      </div>
+      <button class="btn" id="goOffer" disabled>Continue to Offer</button>
+    </div>
+    <footer>
+      Legit prelander — no personal data collected here. Just a quick age gate.
+    </footer>
+  </div>
+
+  <script>
+    const OFFER_URL = "https://track.traffoffers.xyz/click?pid=476&offer_id=2121";
+    const agreeBox = document.getElementById('agreeAge');
+    const btn = document.getElementById('goOffer');
+
+    agreeBox.addEventListener('change', () => {
+      btn.disabled = !agreeBox.checked;
+    });
+
+    btn.addEventListener('click', () => {
+      window.open(OFFER_URL, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
